@@ -54,7 +54,7 @@
                 // network issues, campaigns not present for a particular tag
                 return console.error('Error from moengage:', err);
             }
-            window.webpresponse = data.payload;
+            webp = data.payload;
             console.log(webp);
             var impTracker = data.imp; // Function, you can call impTracker() to send impression stats for a campaign back to MoEngage. Call this after you've successfully rendered the HTML as per the payload provided.
 
@@ -64,6 +64,7 @@
 
         });
         console.log(window.webpresponse);
+        
         
         Moengage.call_web_push({
             "soft_ask": true,
